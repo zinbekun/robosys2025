@@ -17,6 +17,14 @@ $ git clone https://github.com/zinbekun/robosys2025
 $ cd robosys2025
 ```
 
+事前にGitがインストールされていない場合、以下のコマンドからインストールとバージョンの確認を行ってください。
+
+```shell
+$ sudo apt update
+$ sudo apt install git
+$ git --version
+```
+
 
 ## ライセンス
 このソフトウェアパッケージは，3条項BSDライセンスの下，再頒布および使用が許可されます．
