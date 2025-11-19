@@ -7,6 +7,17 @@
     * Ubuntu 24.04.5 LTS
         * Python: 3.7~3.10
 
+
+
+## 使用準備
+下記コマンドを使用し、適当な場所でクローンを行ってください。
+
+```shell
+$ git clone https://github.com/zinbekun/robosys2025
+$ cd robosys2025
+```
+
+
 ## ライセンス
 このソフトウェアパッケージは，3条項BSDライセンスの下，再頒布および使用が許可されます．
 - このパッケージは，ryuichiueda/emcl由来のコード（© 2025 Ryuichi Ueda）を利用しています．
