@@ -1,6 +1,8 @@
 # robosys2025
 ロボットシステム学課題１
 
+[README](https://github.com/zinbekun/robosys2025/blob/main/README.md?plain=1#L2)は[akajaika](https://github.com/akajaika/robosys2024/blob/main/README.md?plain=1)(© 2024 Kai Nonaka)を参考に作られています。
+
 ## ライセンス
 このソフトウェアパッケージは，3条項BSDライセンスの下，再頒布および使用が許可されます．
 - このパッケージは，ryuichiueda/emcl由来のコード（© 2025 Ryuichi Ueda）を利用しています．
