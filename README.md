@@ -1,5 +1,5 @@
 # robosys2025
-ロボットシステム学課題１
+千葉工業大学 未来ロボティクス学科 2024年度 ロボットシステム学内で行った内容に、課題で作成したファイルを追加したものです。
 
 [README](https://github.com/zinbekun/robosys2025/blob/main/README.md?plain=1#L2)は[akajaika](https://github.com/akajaika/robosys2024/blob/main/README.md?plain=1)(© 2024 Kai Nonaka)を参考に作られています。
 
