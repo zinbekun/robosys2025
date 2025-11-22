@@ -90,10 +90,10 @@ if select == 5:
     another_minutes = int(another_minutes_str)
 
     #放送間隔入力
-    another_interval_str = input("放送間隔(何日ごとに放送するのか)を数字のみで入力してください: ")
+    another_interval_str = input("放送周期(何日ごとに放送するのか)を数字のみで入力してください: ")
     while not another_interval_str.isdigit() or (int(another_weekday_str) < 0):
-        print("ERROR:表現できない間隔が入力されました")
-        another_interval_str = input("1日以上の間隔を再入力してください: ")
+        print("ERROR:指定外の入力されました")
+        another_interval_str = input("周期を再入力してください: ")
     another_interval = int(another_interval_str)
 
     #入力された情報から放送日を計算
