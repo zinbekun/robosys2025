@@ -49,7 +49,7 @@ if select == 3:
     count_second = count.seconds - ((count.seconds // 3600) * 3600) - (count_minutes * 60)
     print(f"次のサザエさんの放送まで開始{count.days}日と{count_hour}時間{count_minutes}分{count_second}秒です")    
 
-#ちびまる子ちゃん
+#ちびまる子
 if select == 4:
     maruko_time = datetime(2025, 11, 23, 18)
     now = datetime.now()
