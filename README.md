@@ -1,5 +1,6 @@
 # robosys2025
 千葉工業大学 未来ロボティクス学科 2025年度 ロボットシステム学内で行った内容に、課題で作成したファイルを追加したものです。
+このコード内に含まれている「ドラえもん」、「クレヨンしんちゃん」、「サザエさん」、「ちびまる子ちゃん」の放送日時は2025年11月17日時点での放送日時を基準としています。
 
 [README](https://github.com/zinbekun/robosys2025/blob/main/README.md?plain=1#L2)は[akajaika](https://github.com/akajaika/robosys2024/blob/main/README.md?plain=1)(© 2024 Kai Nonaka)を参考に作られています。
 
