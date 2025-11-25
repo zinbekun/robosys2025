@@ -1,4 +1,4 @@
-name: test
+name: testTV
 on: push
 jobs:
   test:
