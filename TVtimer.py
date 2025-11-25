@@ -30,7 +30,7 @@ if select == 2:
     shintyan_time = datetime(2025, 11, 22, 16, 30)
     now = datetime.now()
     while now > shintyan_time:
-        shintyan_time = shinyan_time + timedelta(days = 7)
+        shintyan_time = shintyan_time + timedelta(days = 7)
     count = shintyan_time - now
     count_hour = count.seconds // 3600
     count_minutes = (count.seconds // 60) - ((count.seconds // 3600) * 60)
@@ -49,7 +49,7 @@ if select == 3:
     count_second = count.seconds - ((count.seconds // 3600) * 3600) - (count_minutes * 60)
     print(f"次のサザエさんの放送まで開始{count.days}日と{count_hour}時間{count_minutes}分{count_second}秒です")    
 
-#ちびまる子
+#ちびまる子ちゃん
 if select == 4:
     maruko_time = datetime(2025, 11, 23, 18)
     now = datetime.now()
