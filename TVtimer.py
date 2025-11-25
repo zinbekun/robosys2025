@@ -67,7 +67,7 @@ if select == 5:
     #番組名入力
     another_title = input("番組名を入力してください: ")
 
-    #放送曜日選択
+    #放送曜日入力
     print("0:月, 1:火, 2:水, 3:木, 4:金, 5:土, 6:日")
     another_weekday_str = input("上記の中から次の放送曜日の番号を入力してください: ")
     while not another_weekday_str.isdigit() or not (0 <= int(another_weekday_str) <= 6):
