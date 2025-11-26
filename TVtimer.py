@@ -89,7 +89,7 @@ if select == 5:
         another_minutes_str = input("時間(minutes)を再入力してください: ")
     another_minutes = int(another_minutes_str)
 
-    #放送間隔入力
+    #放送周期入力
     another_interval_str = input("放送周期(何日ごとに放送するのか)を数字のみで入力してください: ")
     while not another_interval_str.isdigit() or (int(another_weekday_str) < 0):
         print("ERROR:指定外の入力されました")
