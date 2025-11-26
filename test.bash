@@ -34,7 +34,6 @@ out=$(printf "5\nTestTV\n5\n21\n15\n7\n" | python3 TVtimer.py)
 echo "$out" | grep "次のTestTVの放送開始まで" >/dev/null || ng "$LINENO"
 
 
-# 結果判定
 test "${res}" = 0 && echo OK
 exit $res
 
