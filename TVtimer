@@ -12,12 +12,16 @@ def main():
 
     try:
         select = int(sys.argv[1])
+        select = int(sys.argv[2])
+        select = int(sys.argv[3])
+        select = int(sys.argv[4])
+        select = int(sys.argv[5])
     except ValueError:
-        print("ERROR:Enter the number using digits.")
+        print("ERROR:Enter the number using digits")
         sys.exit(1)
 
     if select not in [1, 2, 3, 4, 5]:
-        print("ERROR:Specify a number (1–5).")
+        print("ERROR:Specify a number (1–5)")
         sys.exit(1)
 
     # --- 引数チェック ---
@@ -28,7 +32,7 @@ def main():
 
     # 5 の場合は: program 5 曜日 時 分 周期 → sys.argv は長さ 6 になる
     if select == 5 and len(sys.argv) != 6:
-        print("ERROR:")
+        print("ERROR:Please enter only the correct information for weekday, hour, minute, and interval")
         sys.exit(1)
 
     now = datetime.now()
@@ -58,7 +62,7 @@ def main():
 
         # 入力バリデーション
         if not (0 <= another_weekday <= 6):
-            print("ERROR:Specify the day of the week (0 = Monday, 6 = Sunday).")
+            print("ERROR:Specify the day of the week (0 = Monday, 6 = Sunday)")
             sys.exit(1)
 
         if not (0 <= another_hour <= 23):
@@ -66,11 +70,11 @@ def main():
             sys.exit(1)
 
         if not (0 <= another_minutes <= 59):
-            print("ERROR:Specify the minutes (0–59).")
+            print("ERROR:Specify the minutes (0–59)")
             sys.exit(1)
 
         if another_interval < 1:
-            print("ERROR:Specify the cycle in days (minimum 1).")
+            print("ERROR:Specify the cycle in days (minimum 1)")
             sys.exit(1)
 
         # ここから放送日時計算（今週の指定曜日の日時）
