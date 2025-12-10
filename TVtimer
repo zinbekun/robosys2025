@@ -26,9 +26,10 @@ def main():
         sys.exit(1)
 
     # 5 の場合は: program 5 曜日 時 分 周期 → sys.argv は長さ 6 になる
-    if select == 5 and len(sys.argv) != 6:
-        print("ERROR:Please enter only the correct information for weekday, hour, minute, and interval")
-        sys.exit(1)
+    if select == 5: 
+        if len(sys.argv) != 6:
+            print("ERROR:Please enter only the correct information for weekday, hour, minute, and interval")
+            sys.exit(1)
         try:
             weekday = int(sys.argv[2])
             hour = int(sys.argv[3])
