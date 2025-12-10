@@ -35,9 +35,9 @@ def main():
         hour = int(sys.argv[3])
         minute = int(sys.argv[4])
         interval = int(sys.argv[5])
-        except ValueError:
-            print("ERROR: Enter the number using digits")
-            sys.exit(1)
+    except ValueError:
+        print("ERROR: Enter the number using digits")
+        sys.exit(1)
 
     now = datetime.now()
 
