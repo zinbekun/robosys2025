@@ -45,7 +45,7 @@ out=$(python3 ./TVtimer @)
 echo "$out" | grep "ERROR:Enter the number using digits" >/dev/null || ng "$LINENO"
 
 out=$(python3 ./TVtimer )
-echo "$out" | grep "ERROR:Select a TVprogram [1-5]" >/dev/null || ng "$LINENO"
+echo "$out" | grep -F "ERROR:Select a TVprogram [1-5]" >/dev/null || ng "$LINENO"
 
 out=$(python3 ./TVtimer 5 8 20 20 7)
 echo "$out" | grep "ERROR:Specify the day of the week (0 = Monday, 6 = Sunday)" >/dev/null || ng "$LINENO"

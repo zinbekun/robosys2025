@@ -21,7 +21,6 @@ def main():
         sys.exit(1)
 
     # --- 引数チェック ---
-    # 1〜4 はプログラム名 + 番号 = 2 個
     if select != 5 and len(sys.argv) != 2:
         print("ERROR:Only one entry is allowed")
         sys.exit(1)
