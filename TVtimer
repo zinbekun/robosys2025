@@ -77,7 +77,7 @@ def main():
             print("ERROR:Specify the cycle in days (minimum 1)")
             sys.exit(1)
 
-        # ここから放送日時計算（今週の指定曜日の日時）
+        # 放送日時計算（今週の指定曜日の日時）
         now_weekday = now.weekday()
         diffweekday = (another_weekday - now_weekday) % 7
         first_day = now + timedelta(days=diffweekday)
