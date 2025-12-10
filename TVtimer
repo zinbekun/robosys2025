@@ -1,0 +1,106 @@
+#!/usr/bin/python3
+# SPDX-FileCopyrightText: 2025 Zinbekun
+# SPDX-License-Identifier: BSD-3-Clause
+
+import sys
+from datetime import datetime, timedelta
+
+def main():
+    if len(sys.argv) < 2:
+        print("ERROR:Select a TVprogram [1〜5]")
+        sys.exit(1)
+
+    try:
+        select = int(sys.argv[1])
+    except ValueError:
+        print("ERROR:Enter the number using digits.")
+        sys.exit(1)
+
+    if select not in [1, 2, 3, 4, 5]:
+        print("ERROR:Specify a number (1–5).")
+        sys.exit(1)
+
+    # --- 引数チェック ---
+    # 1〜4 はプログラム名 + 番号 = 2 個
+    if select != 5 and len(sys.argv) != 2:
+        print("ERROR:Only one entry is allowed")
+        sys.exit(1)
+
+    # 5 の場合は: program 5 曜日 時 分 周期 → sys.argv は長さ 6 になる
+    if select == 5 and len(sys.argv) != 6:
+        print("ERROR:")
+        sys.exit(1)
+
+    now = datetime.now()
+
+    # ドラえもん
+    if select == 1:
+        next_time = datetime(2025, 11, 22, 17, 0)
+
+    # クレヨンしんちゃん
+    elif select == 2:
+        next_time = datetime(2025, 11, 22, 16, 30)
+
+    # サザエさん
+    elif select == 3:
+        next_time = datetime(2025, 11, 23, 18, 30)
+
+    # ちびまる子ちゃん
+    elif select == 4:
+        next_time = datetime(2025, 11, 23, 18, 0)
+
+    # その他（任意の曜日・時刻・周期）
+    else:  # select == 5
+        another_weekday = int(sys.argv[2])  # 0〜6
+        another_hour    = int(sys.argv[3])  # 0〜23
+        another_minutes = int(sys.argv[4])  # 0〜59
+        another_interval = int(sys.argv[5]) # 周期（日）
+
+        # 入力バリデーション
+        if not (0 <= another_weekday <= 6):
+            print("ERROR:Specify the day of the week (0 = Monday, 6 = Sunday).")
+            sys.exit(1)
+
+        if not (0 <= another_hour <= 23):
+            print("ERROR:Specify the hour (0–23)")
+            sys.exit(1)
+
+        if not (0 <= another_minutes <= 59):
+            print("ERROR:Specify the minutes (0–59).")
+            sys.exit(1)
+
+        if another_interval < 1:
+            print("ERROR:Specify the cycle in days (minimum 1).")
+            sys.exit(1)
+
+        # ここから放送日時計算（今週の指定曜日の日時）
+        now_weekday = now.weekday()
+        diffweekday = (another_weekday - now_weekday) % 7
+        first_day = now + timedelta(days=diffweekday)
+
+        next_time = datetime(
+            first_day.year, first_day.month, first_day.day,
+            another_hour, another_minutes
+        )
+
+        # すでに過ぎていたら周期分追加（another_interval 日ごと）
+        while next_time < now:
+            next_time += timedelta(days=another_interval)
+
+    # 次の放送日時を未来に調整（固定番組は週7日周期）
+    while now > next_time:
+        next_time += timedelta(days=7)
+
+    diff = next_time - now
+
+    days = diff.days
+    hours = diff.seconds // 3600
+    minutes = (diff.seconds // 60) % 60
+    seconds = diff.seconds % 60
+
+    print(f"{days}days {hours}hour {minutes}min {seconds}s")
+
+if __name__ == "__main__":
+    main()
+
+
