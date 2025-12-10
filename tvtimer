@@ -64,7 +64,7 @@ def main():
         another_minutes = int(sys.argv[4])  # 0〜59
         another_interval = int(sys.argv[5]) # 周期（日）
 
-        # 入力バリデーション
+        
         if not (0 <= another_weekday <= 6):
             print("ERROR:Specify the day of the week (0 = Monday, 6 = Sunday)")
             sys.exit(1)
