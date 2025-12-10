@@ -7,8 +7,8 @@
 [README](https://github.com/zinbekun/robosys2025/blob/main/README.md?plain=1#L2)は[akajaika](https://github.com/akajaika/robosys2024/blob/main/README.md?plain=1)(© 2024 Kai Nonaka)を参考に作られています。
 
 ## テスト済みの環境  
-    * Ubuntu 24.04.5 LTS
-        * Python: 3.7~3.12
+    Ubuntu 24.04.5 LTS
+    Python: 3.7~3.12
 
 
 
