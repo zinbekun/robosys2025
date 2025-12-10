@@ -4,11 +4,11 @@
 
 [![Test](https://github.com/zinbekun/robosys2025/actions/workflows/test.yml/badge.svg)](https://github.com/zinbekun/robosys2025/actions/workflows/test.yml)
 
-[README](https://github.com/zinbekun/robosys2025/blob/main/README.md?plain=1#L2)は[akajaika](https://github.com/akajaika/robosys2024/blob/main/README.md?plain=1)(© 2024 Kai Nonaka)を参考に作られています。
+[README](https://github.com/zinbekun/robosys2025/blob/main/README.md?plain=1#L2)は[akajaika](https://github.com/akajaika/robosys2024/blob/main/README.md?plain=1)（© 2024 Kai Nonaka）を参考に作られています。
 
-  テスト済みの環境  
-    Ubuntu 24.04.5 LTS
-    Python: 3.7~3.12
+    テスト済みの環境  
+    ・Ubuntu 24.04.5 LTS
+    ・Python: 3.7~3.12
 
 
 
@@ -29,28 +29,16 @@ $ git --version
 ```
 
 
-## TVtimer.py 使い方
-指示される情報を入力することであらかじめ用意されているテレビ番組または新たに情報を入力したテレビ番組の放送開始時間までの残り時間を出力します。
+## TVtimer 使い方
+標準入力に1を入力するとドラえもん、２を入力するとクレヨンしんちゃん、３を入力するとサザエさん、４を入力するとちびまる子ちゃんの次の放送までの残り時間が表示されます。また、上記の番組以外の放送時間までの残り時間を表示させたいときは標準入力に５を入力した後に放送曜日を数値に変換した値（0:月, 1:火, 2:水, 3:木, 4:金, 5:土, 6:日）の入力と放送時間（hour）の入力と放送時間（min）の入力と放送周期の入力を行うと、指定した時間までの残り時間が表示されます。
 
 
 ```shell
-$ ./TVtimer.py
-下記の中から次回の放送までの期間が気になるものを番号で選んでください
-1:ドラえもん, 2:クレヨンしんちゃん, 3:サザエさん, 4:ちびまる子ちゃん, 5:その他
-番号を入力してください: 1
-次のドラえもんの放送開始まで6日と18時間55分38秒です
+$  ./tvtimer 1
+3days 3hour 28min 6s
 
-$ ./TVtimer.py
-下記の中から次回の放送までの期間が気になるものを番号で選んでください
-1:ドラえもん, 2:クレヨンしんちゃん, 3:サザエさん, 4:ちびまる子ちゃん, 5:その他
-番号を入力してください: 5
-番組名を入力してください: 金曜ロードショー
-0:月, 1:火, 2:水, 3:木, 4:金, 5:土, 6:日
-上記の中から次の放送曜日の番号を入力してください: 4
-放送時間(hour)を数字のみで入力してください(24時と入力するときは0と入力してください): 21
-放送時間(minutes)を数字のみで入力してください: 0
-放送周期(何日ごとに放送するのか)を数字のみで入力してください: 7
-次の金曜ロードショーの放送開始まで5日と22時間53分48秒です
+$  ./tvtimer 5 1 20 30 7
+6days 6hour 54min 50s
 ```
 
 ## ライセンス
