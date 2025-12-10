@@ -30,14 +30,14 @@ def main():
     if select == 5 and len(sys.argv) != 6:
         print("ERROR:Please enter only the correct information for weekday, hour, minute, and interval")
         sys.exit(1)
-    try:
-        weekday = int(sys.argv[2])
-        hour = int(sys.argv[3])
-        minute = int(sys.argv[4])
-        interval = int(sys.argv[5])
-    except ValueError:
-        print("ERROR: Enter the number using digits")
-        sys.exit(1)
+        try:
+            weekday = int(sys.argv[2])
+            hour = int(sys.argv[3])
+            minute = int(sys.argv[4])
+            interval = int(sys.argv[5])
+        except ValueError:
+            print("ERROR: Enter the number using digits")
+            sys.exit(1)
 
     now = datetime.now()
 
